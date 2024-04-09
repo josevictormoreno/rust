@@ -29,18 +29,36 @@
 //let number = if condition {5} else {6};
 //println!("The value of number is: {}", number);
 //}
-//
+
 //code 4
+//fn main() {
+    //let mut counter = 0;
+
+    //let result = loop {
+        //counter += 1;
+
+        //if counter == 10 {
+            //break counter * 2;
+        //}
+    //};
+
+    //println!("The result is {result}");
+//}
+
+//code 5
 fn main() {
-    let mut counter = 0;
-
-    let result = loop {
-        counter += 1;
-
-        if counter == 10 {
-            break counter * 2;
+    let mut conte = 0;
+    'counting_up: loop {
+        let mut conte = 0;
+        'counting_down: loop {
+            conte += 1;
+            if conte == 5 {
+                break 'counting_up;
+            }
         }
-    };
-
-    println!("The result is {result}");
+    }
 }
+
+// the for and while blocks are just like in python 
+// for number in (1..4) {}
+// while 1 < 4 {}
